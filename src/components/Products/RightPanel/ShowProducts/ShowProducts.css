@@ -1,0 +1,58 @@
+.card {
+	width: 18rem;
+	/* max-height: 28.5rem; */
+	height: auto;
+	margin: 10px 5px;
+	background-color: #f8f8f8;
+}
+.card-body {
+	background-color: white;
+}
+.image_container {
+	height: 17rem;
+	align-self: center;
+}
+
+.card-img-top {
+	max-width: 12.5rem;
+	height: 100%;
+	width: 100%;
+}
+.product_name {
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.5rem;
+}
+.card-title {
+	color: black;
+}
+.product_rating {
+	font-size: 14px;
+	color: #007185;
+	line-height: 1.25rem;
+}
+
+.product_price {
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+
+.rupee {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.delivery_info {
+	font-size: 14px;
+}
+
+.image_container:hover,
+.card-title:hover,
+.product_rating:hover,
+.product_price:hover {
+	cursor: pointer;
+}
+.product_rating:hover,
+.card-title:hover {
+	color: rgb(203, 92, 37);
+}

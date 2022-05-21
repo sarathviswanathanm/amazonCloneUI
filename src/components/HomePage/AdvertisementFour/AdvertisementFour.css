@@ -1,0 +1,55 @@
+.AddFourContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 10px;
+	padding: 20px;
+	width: 100%;
+	min-width: 100px;
+	/* height: 420px; */
+	background-color: white;
+	z-index: 1;
+}
+.Add_Header {
+	max-height: 54.2px;
+}
+.Add_Header > h4 {
+	font-weight: bolder;
+	line-height: 27px;
+}
+.Add_body {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 15px;
+	margin: 20px 0;
+}
+
+.itemOne:hover {
+	cursor: pointer;
+}
+.itemOne > img {
+	height: 100px;
+	width: 100%;
+	object-fit: contain;
+}
+.itemOne > span {
+	font-size: 12px;
+}
+.Add_footer {
+	align-self: start;
+}
+.Add_footer > a {
+	color: #007185;
+	text-decoration: none;
+}
+.Add_footer > a:hover {
+	color: rgb(203, 92, 37);
+	text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+	.Add_footer {
+		align-self: center !important;
+	}
+}

@@ -1,0 +1,256 @@
+.product_details {
+	min-height: 100vh;
+	height: auto;
+	width: 100vw;
+	background-color: white;
+}
+
+.product_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	padding-top: 1.875rem;
+	padding-bottom: 100px;
+}
+
+.product_img {
+	flex: 1 1 200px;
+	max-width: 25rem;
+	max-height: 25rem;
+	justify-self: flex-start;
+	margin-right: 30px;
+	margin-bottom: 50px;
+}
+
+.product_img > img {
+	object-fit: contain;
+	width: 100% !important;
+	height: auto !important;
+}
+
+.product_info {
+	flex: 1 1 200px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+	margin-bottom: 30px;
+}
+
+.product_info > h1 {
+	font-size: 1.6rem !important;
+	line-height: 2rem !important;
+}
+
+.product_ratings {
+	color: #007185;
+}
+
+.product_price_section {
+	display: flex;
+	align-items: flex-start;
+	font-weight: bold;
+}
+
+.price_left {
+	margin-right: 3px;
+	color: #565959;
+}
+
+.price_right {
+	display: flex;
+	flex-direction: column;
+}
+
+.price_right > .amount {
+	color: #b12704;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.price_right > .amount_type {
+	font-weight: 500;
+}
+
+.offers_hightlights {
+	color: #b12704;
+}
+
+.product_offers {
+	font-size: 14.4px;
+}
+
+.about > h1 {
+	font-size: 1rem;
+	font-weight: bold;
+}
+.modal-header {
+	background-color: #f0f0f0;
+	border-bottom: 1px solid #d5d9d9;
+}
+
+.modal-header > h4 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.modal-body {
+	font-size: 14.4px;
+	font-weight: 600;
+	margin-bottom: 100px;
+}
+
+.modal-body > h4 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.product_add_to_cart {
+	flex: 1 1 200px;
+	margin-left: 30px;
+	max-width: 275px !important;
+	height: auto;
+	border: 1px solid #d5d9d9;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.add_to_cart_price {
+	font-size: 28px;
+	font-weight: 600;
+}
+
+.add_to_cart_price > sup {
+	font-size: 14px;
+}
+
+.soldBy {
+	color: #007185;
+}
+.quantity {
+	display: flex;
+	margin-top: 15px;
+}
+
+.quantity > .dropdown {
+	margin-left: 5px;
+}
+
+#productQuantityDropdown {
+	width: 37px;
+	height: 27px;
+	border: 1px solid #d5d9d9;
+}
+
+.buttons {
+	border: none;
+	border-radius: 24px;
+	height: 29px;
+	font-weight: 500;
+	width: 100%;
+}
+
+.btn_add_to_cart {
+	background-color: #ffd712;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.btn_add_to_cart:hover {
+	background-color: rgb(240, 204, 68);
+}
+
+.btn_buy_now {
+	background-color: #ffa41c;
+	margin-bottom: 10px;
+}
+
+.btn_buy_now:hover {
+	background-color: rgb(235, 143, 52);
+}
+
+.secureTransaction {
+	color: #007185;
+}
+
+.giftOptions {
+	margin-top: 10px;
+}
+
+#addToGiftOption {
+	margin-right: 5px;
+}
+
+.wishListButton {
+	border: 1px solid #a5a9ac;
+	background: linear-gradient(to bottom, transparent 0%, #e6e9eb 100%);
+	font-size: 14px !important;
+	font-weight: 500 !important;
+}
+
+.wishList > .dropdown-toggle-split {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.wishList > .dropdown-toggle {
+	border-left: none;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.dropdown-menu {
+	font-size: 14px !important;
+	font-weight: 500 !important;
+	width: auto !important;
+}
+
+.create_wishList {
+	color: #007185;
+}
+
+.create_wishList:hover {
+	background-color: transparent;
+}
+
+#listName {
+	width: 80%;
+	box-sizing: border-box;
+	padding: 5px;
+}
+.modal-footer-buttons {
+	margin-bottom: 20px;
+	margin-right: 20px;
+	display: flex;
+	justify-content: right;
+}
+
+.btn_create_list_cancel {
+	border: 1px solid #d5d9d9;
+	border-radius: 8px;
+	margin-right: 10px;
+}
+
+.btn_create_list_create {
+	background-color: #ffd712;
+	border-radius: 8px;
+}
+/* .giftOptions > input:hover, */
+.soldBy:hover,
+.product_ratings:hover,
+.secureTransaction:hover,
+.create_wishList:hover {
+	cursor: pointer;
+	color: rgb(203, 92, 37);
+	text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+	.product_add_to_cart {
+		max-width: 80vw !important;
+	}
+}

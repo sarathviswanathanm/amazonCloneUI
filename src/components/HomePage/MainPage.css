@@ -1,0 +1,69 @@
+.mainPage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1500px;
+}
+
+/* -------------------carousel--------------------- */
+.mainCarousel {
+	margin-bottom: -150px;
+}
+
+.carousel-control-next {
+	padding-top: 10%;
+	align-items: flex-start;
+	opacity: 1;
+}
+
+.carousel-control-prev {
+	padding-top: 10%;
+	align-items: flex-start;
+	opacity: 1;
+}
+.prev-icon2 {
+	position: relative;
+	left: 30px;
+	filter: invert(1);
+}
+.next-icon2 {
+	position: relative;
+	right: 30px;
+	filter: invert(1);
+}
+/* -------------------carousel--------------------- */
+
+.mainPage__BackgroundImage {
+	width: 100%;
+	z-index: -1;
+	margin-bottom: -150px;
+	/* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+	-webkit-mask-image: linear-gradient(to top, transparent 25%, black 50%);
+	mask-image: linear-gradient(to top, transparent 25%, black 50%);
+}
+
+.mainPage__row {
+	display: flex;
+	z-index: 1;
+	margin: 0 5px;
+	justify-content: center;
+}
+
+@media (max-width: 1024px) {
+	.mainPage__row {
+		flex-wrap: wrap;
+	}
+}
+/* @media (max-width: 680px) {
+	.mainPage__BackgroundImage {
+		padding-bottom: 50px;
+	}
+} */
+
+@media (max-width: 1320px) {
+	.mainPage__BackgroundImage {
+		padding-bottom: 250px;
+	}
+}

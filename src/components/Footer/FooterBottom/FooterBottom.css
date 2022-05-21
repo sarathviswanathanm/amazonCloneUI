@@ -1,0 +1,51 @@
+.footerBottom {
+	background-color: #131a22;
+	color: white;
+	min-width: 100vw;
+	bottom: 0;
+	padding-bottom: 35px;
+}
+.footerBottom_container {
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	row-gap: 10px;
+	padding: 25px 50px;
+}
+
+.navFooterDescText {
+	display: flex;
+	flex-direction: column;
+	margin-left: 25%;
+}
+.navFooterDescText > span:hover {
+	cursor: pointer;
+	text-decoration: underline #999;
+}
+.lineOne {
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+.lineTwo {
+	font-size: 10px;
+	color: #999;
+	font-weight: 600;
+}
+.footerLastRow {
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	font-size: 12px;
+	font-weight: 600;
+	justify-content: center;
+	cursor: default;
+}
+
+.footerLastRow > a {
+	margin-right: 15px;
+	color: white;
+}
+
+.footerLastRow > a:hover {
+	text-decoration: underline white;
+}

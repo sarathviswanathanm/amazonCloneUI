@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Codeply">
+  <title>Codeply simple HTML/CSS/JS preview</title>
+  <!--<base target="_self">--><base href="." target="_self"> 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">  
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+  <style>.scrollSection_Body {
+	display: flex;
+	overflow-x: auto;
+	flex: 1;
+	margin: 0 5px;
+	max-width: 1350px;
+}
+.carousel_body{
+    display:flex;
+    flex-direction-column;
+}
+.scrollSection_Body_Item {
+	display: flex;
+	/* flex: 1; */
+	flex-direction: column;
+	min-width: 180px;
+	max-width: 265px;
+	margin: 0 18px;
+}
+
+.scrollSection_Body_Item img {
+	width: 100%;
+}
+
+.scrollSection_Body_Item span {
+	font-size: 15px;
+	line-height: 35px;
+	font-weight: 600;
+	text-align: center;
+}</style>
+</head>
+<body>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item carousel_body">
+            <div class="scrollSection_Body_Item">
+                <img src="https://ik.imagekit.io/5yc2yhl2a/images/tab9_dWG7QQUjc.jpg?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651472775171" alt="test">
+                <span>₹25,012.00 - ₹28,900.00</span>
+            </div>
+            <div class="scrollSection_Body_Item">
+                <img src="https://ik.imagekit.io/5yc2yhl2a/images/tab9_dWG7QQUjc.jpg?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651472775171" alt="test">
+                <span>₹25,012.00 - ₹28,900.00</span>
+            </div>
+        </div>
+        <div class="carousel-item carousel_body active">
+            <div class="scrollSection_Body_Item">
+                <img src="https://ik.imagekit.io/5yc2yhl2a/images/tab9_dWG7QQUjc.jpg?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651472775171" alt="test">
+                <span>₹25,012.00 - ₹28,900.00</span>
+            </div>
+            <div class="scrollSection_Body_Item">
+                <img src="https://ik.imagekit.io/5yc2yhl2a/images/tab9_dWG7QQUjc.jpg?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651472775171" alt="test">
+                <span>₹25,012.00 - ₹28,900.00</span>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="scrollSection_Body_Item">
+                <img src="https://ik.imagekit.io/5yc2yhl2a/images/tab9_dWG7QQUjc.jpg?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1651472775171" alt="test">
+                <span>₹25,012.00 - ₹28,900.00</span>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  
+  </script>
+  <script>
+    // prevent navigation
+    document.addEventListener("DOMContentLoaded", function() {
+      var links = document.getElementsByTagName("A");
+      for(var i=0; i < links.length; i++) {
+        links[i].addEventListener("click", function(e) {
+          var href = this.getAttribute("href")
+
+          if (!href) {
+            return
+          }
+
+          if (href === '#') {
+            // hash only ('#')
+            console.debug('Internal nav allowed by Codeply');
+            e.preventDefault()
+          }
+          else if (this.hash) {
+            // hash with tag ('#foo')
+            var element = null
+            try {
+              element = document.querySelector(this.hash)
+            }
+            catch(e) {
+              console.debug('Codeply internal nav querySelector failed')
+            }
+            if (element) {
+              // scroll to anchor
+              e.preventDefault();
+              const top = element.getBoundingClientRect().top + window.pageYOffset
+              //window.scrollTo({top, behavior: 'smooth'})
+              window.scrollTo(0,top)
+              console.debug('Internal anchor controlled by Codeply to element:' + this.hash)
+            }
+            else {
+              // allow javascript routing
+              console.debug('Internal nav route allowed by Codeply');
+            }
+          }
+          else if (href.indexOf("/p/")===0 || href.indexOf("/v/")===0) {
+            // special multi-page routing
+            console.debug('Special internal page route: ' + href)
+
+            var l = href.replace('/p/','/v/')
+
+            // reroute
+            e.preventDefault()
+            var newLoc = l + '?from=internal'
+            console.debug('Internal view will reroute to ' + newLoc) 
+            location.href = newLoc
+          }
+          else if (href.indexOf("./")===0) {
+            // special multi-page routing
+            console.debug('Special internal ./ route: ' + href)
+
+            var u = parent.document.URL.split("/")
+            var pn = href.split("/")[1]
+            var plyId = u[u.length-1]
+
+            if (plyId.indexOf('?from')>-1) {
+              // already rerouted this
+              console.debug('already rerouted')
+              plyId = u[u.length-2]
+            }
+
+            var l = plyId + '/' + pn
+            
+            console.debug(u)
+            console.debug(pn)
+            console.debug('l',l)
+
+            // reroute
+            e.preventDefault()
+            var newLoc = '/v/' + l + '?from=internal'
+            console.debug('Internal page will reroute to ' + newLoc) 
+            location.href = newLoc
+          }
+          else {
+            // no external links
+            e.preventDefault();
+            console.debug('External nav prevented by Codeply');
+          }
+          //return false;
+        })
+      }
+    }, null);
+  </script>
+
+
+</body></html>

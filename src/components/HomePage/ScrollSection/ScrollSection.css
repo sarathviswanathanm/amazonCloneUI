@@ -1,0 +1,111 @@
+.scrollSectionContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	padding: 20px;
+	width: 100%;
+	min-width: 300px;
+	background-color: white;
+	z-index: 1;
+}
+.scrollSection_Header {
+	display: flex;
+	max-height: 54.2px;
+	align-self: flex-start;
+	align-items: baseline;
+}
+.scrollSection_Header h4 {
+	font-weight: bolder;
+	line-height: 27px;
+}
+
+.scrollSection_Header a {
+	color: #007185;
+	text-decoration: none;
+	margin-left: 15px;
+}
+
+.scrollSection_Header a:hover {
+	color: rgb(186, 88, 47);
+	text-decoration: underline;
+}
+
+.scrollSection_Body {
+	display: flex;
+	overflow-x: hidden;
+	flex: 1;
+	margin: 0 5px;
+	max-width: 1350px;
+	min-height: 270px;
+}
+.scrollSection_Body:hover,
+.scrollSection_Body:active,
+.scrollSection_Body:focus {
+	overflow-x: auto;
+}
+
+.scrollSection_Body_Item {
+	display: flex;
+	/* flex: 1; */
+	flex-direction: column;
+	min-width: 200px;
+	max-width: 265px;
+	margin: 0 18px;
+}
+
+.scrollSection_Body_Item:hover {
+	cursor: pointer;
+}
+.scrollSection_Body_Item img {
+	width: 100%;
+	height: 210px;
+	object-fit: contain;
+}
+
+.scrollSection_Body_Item span {
+	font-size: 15px;
+	line-height: 35px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.scrollSection_Body::-webkit-scrollbar {
+	height: 6px;
+}
+
+.scrollSection_Body::-webkit-scrollbar-track {
+	background: #fff;
+}
+
+.scrollSection_Body::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+	border-radius: 6px;
+}
+.scrollSection_Body::-webkit-scrollbar-thumb:hover {
+	background: #aaaaaa;
+	margin-bottom: 25px;
+}
+
+@media screen and (max-width: 1410px) {
+	.scrollSection_Body {
+		max-width: 1000px;
+	}
+}
+@media screen and (max-width: 1060px) {
+	.scrollSection_Body {
+		max-width: 700px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.scrollSection_Body {
+		max-width: 300px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.scrollSection_Body {
+		max-width: 280px;
+	}
+}

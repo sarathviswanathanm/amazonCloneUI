@@ -1,0 +1,154 @@
+.navbar {
+	background-color: #131921;
+	min-height: 60px;
+	height: auto;
+	width: auto;
+	min-width: 100vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	top: 0;
+	position: sticky;
+	z-index: 100;
+	/* padding-right: 5px; */
+}
+
+.navbar__logo {
+	width: 100px;
+	object-fit: contain;
+	margin: 18px 12px 10px 12px;
+}
+.navbar__logo:hover {
+	border: 1px solid white;
+	cursor: pointer;
+}
+
+.navbar__locator {
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.navbar__locator:hover {
+	border: 1px solid white;
+	cursor: pointer;
+}
+
+.navbar__locatorIcon {
+	color: white;
+}
+
+.navbar__location {
+	margin-left: 5px;
+}
+
+.navbar__locationLineOne {
+	color: white;
+	font-size: 12px;
+	font-weight: 600;
+}
+.navbar__locationLineTwo {
+	color: white;
+	font-size: 14px;
+	font-weight: 800;
+}
+
+.navbar__search {
+	display: flex;
+	align-items: center;
+	margin: 0 15px;
+	flex: auto;
+}
+.navbar__searchDropdown {
+	width: 50px;
+	border: none;
+	height: 35px;
+	border-right: 1px solid #cdcdcd;
+	border-radius: 5px 0 0 5px;
+	background-color: #f3f3f3;
+	text-align: center;
+}
+.navbar__searchDropdown:hover {
+	width: auto;
+	cursor: pointer;
+}
+.navbar__searchDropdown:active {
+	width: auto;
+}
+
+.navbar__SearchInput {
+	height: 35px;
+	padding: 10px;
+	border: none;
+	width: 100%;
+	border-radius: 0;
+	outline: none;
+}
+
+.navbar__searchIconContainer {
+	background-color: #f9bd69;
+	height: 35px;
+	padding: 4px;
+	border-radius: 0 5px 5px 0;
+}
+.navbar__searchIconContainer:hover {
+	cursor: pointer;
+	background-color: #f3a846;
+}
+.navbar__options {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.signInDiv {
+	text-decoration: none;
+}
+.navbar__option {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	margin: 0 10px;
+}
+
+.navbar__option:hover {
+	border: 1px solid white;
+	cursor: pointer;
+}
+
+.navbar__optionLineOne {
+	font-size: 12px;
+	font-weight: 500;
+}
+.navbar__optionLineTwo {
+	font-size: 14px;
+	font-weight: 800;
+}
+
+.navbar__cartIcon {
+	color: white;
+	height: 30px;
+	filter: invert(1);
+}
+.navbar__cart {
+	margin: 0 25px 0 1px;
+}
+.navbar__cartCount {
+	color: #f08804;
+	font-size: 16px;
+	font-weight: 800;
+	position: relative;
+	right: 21px;
+	bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+	.navbar {
+		/* height: 140px; */
+		/* flex-wrap: wrap; */
+		padding-bottom: 5px;
+	}
+	.navbar__options {
+		padding: 10px 0;
+	}
+}

@@ -1,0 +1,24 @@
+.products_container {
+	height: auto;
+	width: 100vw;
+	display: flex;
+	background-color: white;
+}
+.left_container {
+	flex: 15%;
+	z-index: 1;
+	max-width: 15vw;
+}
+.right_container {
+	flex: 85%;
+	z-index: 1;
+}
+
+@media screen and (max-width: 575px) {
+	.left_container {
+		z-index: 2;
+	}
+	.right_container {
+		margin-top: 50px;
+	}
+}

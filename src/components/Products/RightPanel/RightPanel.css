@@ -1,0 +1,17 @@
+.rightPanel_container {
+	padding: 10px;
+}
+
+.rightPanel_container > span {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.product-list {
+	display: flex;
+	flex-wrap: wrap;
+	border-left: 1px solid #ddd;
+}
+.product_rating {
+	display: flex;
+}
