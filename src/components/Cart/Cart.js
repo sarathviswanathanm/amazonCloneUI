@@ -42,6 +42,7 @@ function Cart() {
 		for (let i = 1; i <= 10; i++) {
 			listArray.push(
 				<li
+					key={i}
 					className="dropdown-item"
 					onClick={() => {
 						quantityCount(i, itemId);
@@ -87,9 +88,9 @@ function Cart() {
 					{selectAll ? "Select " : "Deselect "}all items
 				</span>
 				<hr />
-				{basket.map((item) => {
+				{basket.map((item, index) => {
 					return (
-						<div className="cart_item">
+						<div className="cart_item" key={index}>
 							<input
 								type="checkbox"
 								name="itemCheckbox"

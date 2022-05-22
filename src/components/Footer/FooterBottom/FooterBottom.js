@@ -92,9 +92,9 @@ function FooterBottom() {
 				</div>
 			</div>
 			<div className="container footerLastRow">
-				<a href="/nowhere">Conditions of Use & Sale</a>
-				<a href="/nowhere">Privacy Notice</a>
-				<a href="/nowhere">Interest-Based Ads</a>
+				<a href="/">Conditions of Use & Sale</a>
+				<a href="/">Privacy Notice</a>
+				<a href="/">Interest-Based Ads</a>
 				<span>© 1996-2022, Amazon.com, Inc. or its affiliates</span>
 			</div>
 		</div>

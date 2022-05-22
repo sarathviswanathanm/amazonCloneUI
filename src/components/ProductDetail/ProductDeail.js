@@ -24,6 +24,7 @@ function ProductDeail() {
 	const addToBasket = () => {
 		basket.map((basketItem) => {
 			if (basketItem.id == id) found = true;
+			return found;
 		});
 		if (!found) {
 			dispatch({
@@ -49,6 +50,7 @@ function ProductDeail() {
 		for (let i = 1; i <= 10; i++) {
 			listArray.push(
 				<li
+					key={i}
 					className="dropdown-item"
 					onClick={() => {
 						quantityCount(i);
@@ -161,7 +163,7 @@ function ProductDeail() {
 					<div className="about">
 						<h1>About this item</h1>
 						<ul>
-							{productDetails.about != undefined ? (
+							{productDetails.about !== undefined ? (
 								productDetails.about.map((item, index) => (
 									<li key={index}>{item}</li>
 								))
@@ -233,7 +235,7 @@ function ProductDeail() {
 					<span style={{ color: "green" }}>{productDetails.status}.</span>
 					<span>
 						Sold by{" "}
-						<a href="/nowhere" className="soldBy">
+						<a href="/" className="soldBy">
 							{productDetails.soldby}
 						</a>{" "}
 						and fulfilled by Amzon
@@ -302,7 +304,7 @@ function ProductDeail() {
 							{wishList.map((item, index) => {
 								return (
 									<li key={index}>
-										<a className="dropdown-item" href="/nowhere">
+										<a className="dropdown-item" href="/">
 											{item}
 										</a>
 									</li>

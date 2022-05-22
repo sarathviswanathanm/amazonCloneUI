@@ -95,7 +95,7 @@ function FooterTop() {
 								{column.items.map((item, ind) => {
 									return (
 										<li className="listItem" key={ind}>
-											<a href="/nowhere">{item}</a>
+											<a href="/">{item}</a>
 										</li>
 									);
 								})}
@@ -138,7 +138,7 @@ function FooterTop() {
 							return (
 								<form action="/" key={index}>
 									<li className="languageItem" key={index}>
-										<a href="/nowhere" className="dropdown-item">
+										<a href="/" className="dropdown-item">
 											<input type="radio" name="req_language" id={language} />
 											{"  "}
 											<label htmlFor={language}>{language}</label>
@@ -153,7 +153,7 @@ function FooterTop() {
 						<li>
 							<a
 								className="dropdown-item"
-								href="/nowhere"
+								href="/"
 								style={{ background: "none", cursor: "default" }}
 							>
 								You are shopping on Amazon.in
@@ -166,7 +166,7 @@ function FooterTop() {
 				<div className="countries">
 					{countries.map((country, index) => {
 						return (
-							<a href="/nowhere" key={index}>
+							<a href="/" key={index}>
 								{country}
 							</a>
 						);

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { auth } from "../../firebase";
 import { onAuthStateChanged } from "@firebase/auth";
 import { useStateValue } from "../../StateProvider";
+import { getBasketSize } from "../../reducer";
 import "./Navigation.css";
 
 function NavBar() {
@@ -87,7 +88,7 @@ function NavBar() {
 				<Link to="/cart">
 					<div className="navbar__option navbar__cart">
 						<span className="navbar__optionLineOne navbar__cartCount">
-							{basket.length}
+							{getBasketSize(basket)}
 						</span>
 						<span className="navbar__optionLineTwo">Cart</span>
 					</div>
