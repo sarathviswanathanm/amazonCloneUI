@@ -5,12 +5,18 @@ import ScrollSection from "./ScrollSection/ScrollSection";
 import "./MainPage.css";
 
 function MainPage() {
-	// alert(
-	// 	"This is a demo. Products are available only in the Mobiles section. Please click on MOBILES in top menu to see the products."
-	// );
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
+
+	var alerted = localStorage.getItem("alerted") || "";
+	if (alerted !== "yes") {
+		alert(
+			"This is a demo. Products are available only in the Mobiles section. Please click on MOBILES in top menu to see the products."
+		);
+		localStorage.setItem("alerted", "yes");
+	}
+
 	return (
 		<div className="mainPage">
 			<div className="mainPage__container">
