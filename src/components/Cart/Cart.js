@@ -16,10 +16,11 @@ function Cart() {
 		setSelectAll(selectAll);
 		for (var i = 0, n = checkboxes.length; i < n; i++) {
 			checkboxes[i].checked = selectAll;
-			if (checkboxes[i].checked == true) {
+			if (checkboxes[i].checked === true) {
 				setSelectAll(false);
 			}
 		}
+		// eslint-disable-next-line
 	}, []);
 
 	const removeFromBasket = (id) => {
@@ -67,7 +68,7 @@ function Cart() {
 		let checkboxes = document.querySelectorAll("#itemCheckbox");
 		let condition;
 		for (var i = 0, n = checkboxes.length; i < n; i++) {
-			if (checkboxes[i].checked == false) {
+			if (checkboxes[i].checked === false) {
 				condition = true;
 				break;
 			}

@@ -10,7 +10,7 @@ import "./Navigation.css";
 
 function NavBar() {
 	const [user, setUser] = useState({});
-	const [{ basket }, dispatch] = useStateValue();
+	const [{ basket }] = useStateValue();
 
 	useEffect(() => {
 		onAuthStateChanged(auth, (currentUser) => {

@@ -14,16 +14,16 @@ function ProductDeail() {
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
-		let itemFilter = ProductList.filter((item) => item.id == id);
+		let itemFilter = ProductList.filter((item) => item.id === id);
 		setProductDetails(itemFilter[0]);
-	}, []);
+	}, [id]);
 
 	const [{ basket }, dispatch] = useStateValue();
 	var found = false;
 	let quantity = 1;
 	const addToBasket = () => {
 		basket.map((basketItem) => {
-			if (basketItem.id == id) found = true;
+			if (basketItem.id === id) found = true;
 			return found;
 		});
 		if (!found) {
@@ -98,7 +98,8 @@ function ProductDeail() {
 							/>
 						</span>
 						<span style={{ marginLeft: "3px" }}>
-							{productDetails.no_of_ratings} ratings | 1000+ answered questions
+							{productDetails.no_of_ratings} ratings |{" "}
+							{productDetails.answered_questions} answered questions
 						</span>
 					</div>
 

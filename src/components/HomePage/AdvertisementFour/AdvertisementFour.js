@@ -26,7 +26,7 @@ function AdvertisementFour(props) {
 				</div>
 			</div>
 			<div className="Add_footer">
-				<a href="#">see all offers</a>
+				<a href="/">see all offers</a>
 			</div>
 		</div>
 	);

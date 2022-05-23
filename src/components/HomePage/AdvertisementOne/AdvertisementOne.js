@@ -11,7 +11,7 @@ function AdvertisementOne(props) {
 				<img src={props.image} alt="" />
 			</div>
 			<div className="Add_footer">
-				<a href="#">see all offers</a>
+				<a href="/">see all offers</a>
 			</div>
 		</div>
 	);

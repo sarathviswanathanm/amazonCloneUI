@@ -12,12 +12,11 @@ function LoginPage() {
 	const navigate = useNavigate();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	// const [user, setUser] = useState()
 
 	const signIn = async (e) => {
 		e.preventDefault();
 		try {
-			const user = await signInWithEmailAndPassword(auth, email, password);
+			await signInWithEmailAndPassword(auth, email, password);
 			if (auth) {
 				navigate("/");
 			}
@@ -28,7 +27,7 @@ function LoginPage() {
 	const register = async (e) => {
 		e.preventDefault();
 		try {
-			const user = await createUserWithEmailAndPassword(auth, email, password);
+			await createUserWithEmailAndPassword(auth, email, password);
 			alert("User Registered. Login Now!");
 		} catch (error) {
 			alert(error.message);

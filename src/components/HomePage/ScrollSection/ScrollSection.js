@@ -7,7 +7,7 @@ function ScrollSection() {
 		<div className="scrollSectionContainer">
 			<div className="scrollSection_Header">
 				<h4>Blockbuster deals</h4>
-				<a href="#">see all offers</a>
+				<a href="/">see all offers</a>
 			</div>
 			<div className="scrollSection_Body">
 				{Products.map((product, index) => {
